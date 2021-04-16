@@ -21,8 +21,8 @@
 		// data() {
 		// 	return {
 		// 		obj: {
-    //       'a':1
-    //     },
+		//       'a':1
+		//     },
 		// 	}
 		// },
 	}
@@ -30,15 +30,21 @@
 
 <script setup>
 	import { defineProps, reactive } from "vue"
-  import axios from 'axios'
+	import axios from "axios"
 
 	defineProps({
-		msg: String
+		msg: String,
 	})
 
 	const state = reactive({ count: 0 })
-  const obj = reactive({})
-  const fetchData = axios.get('https://my-json-server.typicode.com/<your-username>/<your-repo>')
+	const obj = reactive({})
+	const fetchData = axios
+		.get(
+			"https://my-json-server.typicode.comhttps://github.com/xiannvjiadexiaogouzi/vue3-demos/blob/master/vue3-vite-todo-app"
+		)
+		.then((res) => {
+			console.log(res)
+		})
 </script>
 
 <style scoped>
